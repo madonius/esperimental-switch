@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/madonius/projects/kadsenjammer/kadsenjammer.sch</source>
+    <date>Sat 25 Jun 2016 09:21:44 PM UTC</date>
+    <tool>Eeschema (2016-05-20 BZR 6816, Git 1e0a72d)-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>kadsenjammer.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="YOL0">
+      <value>ESP-07v2</value>
+      <libsource lib="ESP8266" part="ESP-07v2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576EECF6</tstamp>
+    </comp>
+    <comp ref="JUMPER0">
+      <value>JUMPER3</value>
+      <libsource lib="device" part="JUMPER3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576EEEE2</tstamp>
+    </comp>
+    <comp ref="R0">
+      <value>22k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576EEFC6</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>22k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576EF2B5</tstamp>
+    </comp>
+    <comp ref="PINHDR0">
+      <value>CONN_01X03</value>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576EF38A</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>R</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576EFEF6</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>R</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>576F00C3</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="conn" part="CONN_01X03">
+      <description>Connector, single row, 01x03</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ESP8266" part="ESP-12">
+      <aliases>
+        <alias>ESP-07v2</alias>
+      </aliases>
+      <description>ESP8622 ESP-12 module, 16 pins, 2mm, PCB antenna</description>
+      <docs>http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/</docs>
+      <footprints>
+        <fp>ESP-07*</fp>
+        <fp>ESP-12*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP-12</field>
+      </fields>
+      <pins>
+        <pin num="1" name="REST" type="input"/>
+        <pin num="2" name="ADC" type="passive"/>
+        <pin num="3" name="CH_PD" type="input"/>
+        <pin num="4" name="GPIO16" type="BiDi"/>
+        <pin num="5" name="GPIO14" type="BiDi"/>
+        <pin num="6" name="GPIO12" type="BiDi"/>
+        <pin num="7" name="GPIO13" type="BiDi"/>
+        <pin num="8" name="VCC" type="power_in"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="GPIO15" type="BiDi"/>
+        <pin num="11" name="GPIO2" type="BiDi"/>
+        <pin num="12" name="GPIO0" type="BiDi"/>
+        <pin num="13" name="GPIO4" type="BiDi"/>
+        <pin num="14" name="GPIO5" type="BiDi"/>
+        <pin num="15" name="RXD" type="input"/>
+        <pin num="16" name="TXD" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="JUMPER3">
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">JUMPER3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="ESP8266">
+      <uri>/home/madonius/kicad/libraries/kicad-ESP8266/ESP8266.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="YOL0" pin="12"/>
+    </net>
+    <net code="2" name="Net-(R0-Pad2)">
+      <node ref="R0" pin="2"/>
+      <node ref="YOL0" pin="1"/>
+      <node ref="YOL0" pin="3"/>
+    </net>
+    <net code="3" name="Net-(R3-Pad1)">
+      <node ref="YOL0" pin="10"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="4" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="YOL0" pin="11"/>
+    </net>
+    <net code="5" name="Net-(YOL0-Pad13)">
+      <node ref="YOL0" pin="13"/>
+    </net>
+    <net code="6" name="Net-(YOL0-Pad14)">
+      <node ref="YOL0" pin="14"/>
+    </net>
+    <net code="7" name="Net-(PINHDR0-Pad2)">
+      <node ref="PINHDR0" pin="2"/>
+      <node ref="YOL0" pin="16"/>
+    </net>
+    <net code="8" name="Net-(PINHDR0-Pad3)">
+      <node ref="PINHDR0" pin="3"/>
+      <node ref="YOL0" pin="15"/>
+    </net>
+    <net code="9" name="GND">
+      <node ref="PINHDR0" pin="1"/>
+      <node ref="YOL0" pin="9"/>
+      <node ref="R3" pin="2"/>
+      <node ref="JUMPER0" pin="3"/>
+    </net>
+    <net code="10" name="+3V3">
+      <node ref="JUMPER0" pin="1"/>
+      <node ref="R0" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="YOL0" pin="8"/>
+    </net>
+    <net code="11" name="Net-(YOL0-Pad7)">
+      <node ref="YOL0" pin="7"/>
+    </net>
+    <net code="12" name="Net-(YOL0-Pad6)">
+      <node ref="YOL0" pin="6"/>
+    </net>
+    <net code="13" name="Net-(YOL0-Pad5)">
+      <node ref="YOL0" pin="5"/>
+    </net>
+    <net code="14" name="Net-(YOL0-Pad4)">
+      <node ref="YOL0" pin="4"/>
+    </net>
+    <net code="15" name="Net-(YOL0-Pad2)">
+      <node ref="YOL0" pin="2"/>
+    </net>
+    <net code="16" name="Net-(JUMPER0-Pad2)">
+      <node ref="R1" pin="1"/>
+      <node ref="JUMPER0" pin="2"/>
+    </net>
+  </nets>
+</export>
